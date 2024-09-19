@@ -5,7 +5,6 @@ import datetime
 # Inicializa el motor de texto a voz
 engine = pyttsx3.init()
 
-
 class SpeechRecognitionSystem:
 
     def speak(self, text_: str = "buenas"):
