@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="500dfb35-9303-4b64-8c39-5763d6b3f774" name="Changes" comment="File name" />
+    <list default="true" id="500dfb35-9303-4b64-8c39-5763d6b3f774" name="Changes" comment="File name">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assistem/model_Asistem.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assistem/model_Asistem.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,8 +31,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/KevinMateoG/asistem_voice.git&quot;,
-    &quot;accountId&quot;: &quot;42f84c12-bd31-4494-8caa-8511f08266b7&quot;
+    &quot;url&quot;: &quot;https://github.com/SaraR0613/asistem_voice.git&quot;,
+    &quot;accountId&quot;: &quot;18453f42-0eb5-42cc-a58b-c462d7ddf33a&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -45,6 +48,7 @@
   &quot;keyToString&quot;: {
     &quot;Python.model.executor&quot;: &quot;Run&quot;,
     &quot;Python.model2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.model_Asistem.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -137,8 +141,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.18968.29" />
-        <option value="bundled-python-sdk-f5635417b835-2767605e8bc2-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.18968.29" />
+        <option value="bundled-python-sdk-abccbe9d933a-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.20224.428" />
       </set>
     </attachedChunks>
   </component>
