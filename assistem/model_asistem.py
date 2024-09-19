@@ -35,17 +35,8 @@ class Webnavegartor:
         os.system(f'start {url}')
 
 
-engine.say("por favor ingrese un texto")
-engine.runAndWait()
-
-a = input("por favor ingrese un texto: ")
-
-url = str("C:\Prueba")
-SpeechRecognitionSystem().speak(a)
-SpeechRecognitionSystem().get_datetime()
-Fillemanager().open_file(url)
-Fillemanager().open_notepad()
-Webnavegartor().open_google_tab()
+#engine.say("por favor ingrese un texto")
+#engine.runAndWait()
 
 
 recognizer = sr.Recognizer()
@@ -59,4 +50,15 @@ with mic as source:
     audio = recognizer.listen(source)
 
 text = recognizer.recognize_google(audio, language = 'ES')
-print(f'Has dicho: {text}')
+
+
+#a = input("por favor ingrese un texto: ")
+
+url = str("C:\Prueba")
+SpeechRecognitionSystem().speak(text)
+SpeechRecognitionSystem().get_datetime()
+Fillemanager().open_file(url)
+Fillemanager().open_notepad()
+Webnavegartor().open_google_tab()
+
+
