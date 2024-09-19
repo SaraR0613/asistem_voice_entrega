@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="500dfb35-9303-4b64-8c39-5763d6b3f774" name="Changes" comment="File name">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assistem/model_Asistem.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assistem/model_Asistem.py" afterDir="false" />
-    </list>
+    <list default="true" id="500dfb35-9303-4b64-8c39-5763d6b3f774" name="Changes" comment="Microfono" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -196,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726711106198</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Microfono">
+      <option name="closed" value="true" />
+      <created>1726761592897</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1726761592897</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,7 +224,8 @@
     <MESSAGE value="modificacion Pruebas" />
     <MESSAGE value="Update Class" />
     <MESSAGE value="File name" />
-    <option name="LAST_COMMIT_MESSAGE" value="File name" />
+    <MESSAGE value="Microfono" />
+    <option name="LAST_COMMIT_MESSAGE" value="Microfono" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/asistem_voice$model2.coverage" NAME="model2 Coverage Results" MODIFIED="1726710741443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Model" />
