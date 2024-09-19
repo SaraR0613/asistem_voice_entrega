@@ -3,14 +3,13 @@ import os
 import datetime
 import speech_recognition as sr
 import pyaudio
-#from speech_recognition import Microphone
 
-# Inicializa el motor de texto a voz
 engine = pyttsx3.init()
 p = pyaudio.PyAudio()
+
 class SpeechRecognitionSystem:
 
-    def speak(self, text_: str = "buenas"):
+    def speak(self, text_: str):
         pyttsx3.init().say(text_)
         pyttsx3.init().runAndWait()
 
@@ -39,8 +38,6 @@ class Webnavegartor:
 engine.say("por favor ingrese un texto")
 engine.runAndWait()
 
-
-
 a = input("por favor ingrese un texto: ")
 
 url = str("C:\Prueba")
@@ -54,7 +51,7 @@ Webnavegartor().open_google_tab()
 recognizer = sr.Recognizer()
 mic = sr.Microphone()
 
-engine.say("por favor ingrese un texto")
+engine.say("Ya puedes hablar")
 engine.runAndWait()
 
 with mic as source:
