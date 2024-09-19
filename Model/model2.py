@@ -1,8 +1,7 @@
-#import speech_recognition as sr
 import pyttsx3
 import os
 import datetime
-#import requests
+
 
 # Inicializa el motor de texto a voz
 engine = pyttsx3.init()
