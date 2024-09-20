@@ -31,7 +31,7 @@ while True:
     elif text == "dos":
         ma.SpeechRecognitionSystem().get_datetime()
     elif text == "tres":
-        url = str("C:\Prueba")
+        url = str("C:/Prueba")
         ma.Fillemanager().open_file(url)
     elif text == "cuatro":
         ma.Fillemanager().open_notepad()
