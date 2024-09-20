@@ -3,3 +3,4 @@ DateTime~=5.5
 requests~=2.32.3
 gTTS~=2.5.3
 pyttsx3~=2.97
+PyAudio~=0.2.14
