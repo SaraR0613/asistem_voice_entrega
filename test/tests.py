@@ -1,5 +1,4 @@
 import os
-
 import pyttsx3
 import pyaudio
 import json
@@ -30,8 +29,6 @@ def recognize_speech():
             if text:
                 print(f"Has dicho: {text}")
                 return text.lower()  # Convertir a minúsculas
-        else:
-            print("No se detectó una frase clara.")
 # Bucle principal de comandos por voz
 while True:
     engine.say("Habla")
