@@ -5,7 +5,7 @@ import json
 from vosk import Model, KaldiRecognizer
 from assistem.model_asistem import FileManager, SpeechRecognitionSystem, WebNavigator
 
-model_path = "C:/Users/Mateo/PycharmProjects/asistem_voice/assistem/vosk-model-small-es-0.42"  # Cambia esta ruta si lo pones en otro lugar
+model_path = "C:/Users/Mateo/PycharmProjects/asistem_voice/assistem/vosk-model-small-es-0.42"
 if not os.path.exists(model_path):
     print(f"Modelo no encontrado en {model_path}")
     exit(1)
@@ -29,6 +29,10 @@ def recognize_speech():
             if text:
                 print(f"Has dicho: {text}")
                 return text.lower()  # Convertir a minúsculas
+
+def funciones():
+    engine.say("")
+    engine.runAndWait()
 
 # Bucle principal de comandos por voz
 while True:
@@ -58,14 +62,12 @@ while True:
         FileManager().create_note(nombre, texto)
 
     elif text == "cuatro":
-        if True:
             engine.say("¿Qué archivo quieres abrir")
             engine.runAndWait()
             nombre = recognize_speech()
+
             url = f"C:/Users/Mateo/PycharmProjects/asistem_voice/Archivos/{nombre}.txt"
             FileManager().open_file(url)
-        engine.say("el archivo no existe")
-        engine.runAndWait()
 
     elif text == "cinco":
         WebNavigator().open_google_tab()
