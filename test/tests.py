@@ -14,11 +14,11 @@ recognizer = KaldiRecognizer(model, 16000)
 engine = pyttsx3.init()
 p = pyaudio.PyAudio()
 # Función para reconocer la voz usando Vosk
+
 def recognize_speech():
     mic = pyaudio.PyAudio()
     stream = mic.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=8192)
     stream.start_stream()
-
     print("Escuchando...")
     while True:
         data = stream.read(4096, exception_on_overflow=False)
@@ -29,6 +29,7 @@ def recognize_speech():
             if text:
                 print(f"Has dicho: {text}")
                 return text.lower()  # Convertir a minúsculas
+
 # Bucle principal de comandos por voz
 while True:
     engine.say("Habla")
@@ -40,17 +41,35 @@ while True:
         engine.say("¿Qué quieres que te lea?")
         engine.runAndWait()
         a = recognize_speech()
-        if a:
-            SpeechRecognitionSystem().speak(a)
+        SpeechRecognitionSystem().speak(a)
+
     elif text == "dos":
         SpeechRecognitionSystem().get_datetime()
+
     elif text == "tres":
-        url = str("C:/Prueba")
-        FileManager().open_file(url)
+        engine.say("¿Qué nombre quieres que tenga el archivo?")
+        engine.runAndWait()
+        nombre = recognize_speech()
+
+        engine.say(f"¿Qué quieres que contenga el archivo {nombre}?")
+        engine.runAndWait()
+        texto = recognize_speech()
+
+        FileManager().create_note(nombre, texto)
+
     elif text == "cuatro":
-        FileManager().open_notepad()
+        if True:
+            engine.say("¿Qué archivo quieres abrir")
+            engine.runAndWait()
+            nombre = recognize_speech()
+            url = f"C:/Users/Mateo/PycharmProjects/asistem_voice/Archivos/{nombre}.txt"
+            FileManager().open_file(url)
+        engine.say("el archivo no existe")
+        engine.runAndWait()
+
     elif text == "cinco":
         WebNavigator().open_google_tab()
+
     elif text == "salir":
         engine.say("Hasta luego")
         engine.runAndWait()
