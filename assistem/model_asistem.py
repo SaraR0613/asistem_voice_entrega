@@ -30,8 +30,6 @@ class FileManager:
     def open_folder(self, file):
         os.system(f'start {file}')
 
-
-
 class WebNavigator:
 
     def open_google_tab(self):
