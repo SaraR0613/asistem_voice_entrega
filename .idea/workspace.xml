@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="500dfb35-9303-4b64-8c39-5763d6b3f774" name="Changes" comment="Balanceo de la rapidez a la hora de hablar el sistema">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assistem/model_asistem.py" beforeDir="false" afterPath="$PROJECT_DIR$/assistem/model_asistem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/tests.py" afterDir="false" />
-    </list>
+    <list default="true" id="500dfb35-9303-4b64-8c39-5763d6b3f774" name="Changes" comment="Optimizacion de espacio para legibilidad" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -225,7 +221,7 @@
       <workItem from="1726799649341" duration="530000" />
       <workItem from="1728745709125" duration="567000" />
       <workItem from="1729030152638" duration="22000" />
-      <workItem from="1730143013829" duration="11335000" />
+      <workItem from="1730143013829" duration="11814000" />
     </task>
     <task id="LOCAL-00001" summary="Update def speak, open file, get time, open google and tests">
       <option name="closed" value="true" />
@@ -379,7 +375,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730160873173</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary=" actualizacion de url y funcion para abrir la carpeta de archivos principal">
+      <option name="closed" value="true" />
+      <created>1730165342576</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1730165342576</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Optimizacion de espacio para legibilidad">
+      <option name="closed" value="true" />
+      <created>1730165408953</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1730165408953</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,11 +423,13 @@
     <MESSAGE value="eliminacion de mode_2" />
     <MESSAGE value="cambio de la funcion open y actualizacion del archivo test" />
     <MESSAGE value="Balanceo de la rapidez a la hora de hablar el sistema" />
-    <option name="LAST_COMMIT_MESSAGE" value="Balanceo de la rapidez a la hora de hablar el sistema" />
+    <MESSAGE value=" actualizacion de url y funcion para abrir la carpeta de archivos principal" />
+    <MESSAGE value="Optimizacion de espacio para legibilidad" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimizacion de espacio para legibilidad" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/asistem_voice$test.coverage" NAME="test Coverage Results" MODIFIED="1726794823735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/asistem_voice$model2.coverage" NAME="model2 Coverage Results" MODIFIED="1726710741443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Model" />
-    <SUITE FILE_PATH="coverage/asistem_voice$tests.coverage" NAME="tests Coverage Results" MODIFIED="1730164890059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/asistem_voice$tests.coverage" NAME="tests Coverage Results" MODIFIED="1730165125166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
   </component>
 </project>
