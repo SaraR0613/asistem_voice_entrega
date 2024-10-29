@@ -37,6 +37,7 @@ def funciones():
                "si quieres creat un archivo de texto con algo di tres\n"
                "si quieres abrir un archivo de texto di cuantro\n"
                "si quieres abrir google di cinco\n"
+               "si queires abrir la carpeta donde se encuentran tus archivos de seis\n"
                "si quieres dejar de usar di salir\n"
                "si quieres que repita todo de nuevo di repite")
     engine.runAndWait()
@@ -75,18 +76,24 @@ while True:
             engine.runAndWait()
             nombre = recognize_speech()
 
-            url = f"C:/Users/Mateo/PycharmProjects/asistem_voice/Archivos/{nombre}.txt"
+            url = f"C:/Prueba/{nombre}.txt"
             FileManager().open_file(url)
 
     elif text == "cinco":
         WebNavigator().open_google_tab()
 
+    elif text == "seis":
+        url = str("C:\Prueba")
+        FileManager().open_folder(url)
+
     elif text == "salir":
         engine.say("Hasta luego")
         engine.runAndWait()
         break
+
     elif text == "repite":
         funciones()
+
     else:
         engine.say("No se encontró opción")
         engine.runAndWait()

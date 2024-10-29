@@ -24,11 +24,12 @@ class FileManager:
         os.system(f'start {file_path}')  # Usa 'start' en Windows para abrir archivos
 
     def create_note(self, nombre: str, _text: str):
-        with open(f'C:/Users/Mateo/PycharmProjects/asistem_voice/Archivos/{nombre}.txt', 'w', encoding='utf8') as note:
+        with open(f'C:/Prueba/{nombre}.txt', 'w', encoding='utf8') as note:
             note.write(_text)
 
-    def open_notepad(self, url):
-        os.system(url)  # Abre el Bloc de notas
+    def open_folder(self, file):
+        os.system(f'start {file}')
+
 
 
 class WebNavigator:
