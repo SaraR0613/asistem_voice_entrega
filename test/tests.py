@@ -12,9 +12,10 @@ if not os.path.exists(model_path):
 model = Model(model_path)
 recognizer = KaldiRecognizer(model, 16000)
 engine = pyttsx3.init()
+engine.setProperty("rate", 160)
 p = pyaudio.PyAudio()
-# Función para reconocer la voz usando Vosk
 
+# Función para reconocer la voz usando Vosk
 def recognize_speech():
     mic = pyaudio.PyAudio()
     stream = mic.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=8192)
@@ -31,12 +32,20 @@ def recognize_speech():
                 return text.lower()  # Convertir a minúsculas
 
 def funciones():
-    engine.say("")
+    engine.say("si quieres que te lea algo di uno\n"
+               "si quieres que te diga la hora y el dia di dos\n"
+               "si quieres creat un archivo de texto con algo di tres\n"
+               "si quieres abrir un archivo de texto di cuantro\n"
+               "si quieres abrir google di cinco\n"
+               "si quieres dejar de usar di salir\n"
+               "si quieres que repita todo de nuevo di repite")
     engine.runAndWait()
+
+funciones()
 
 # Bucle principal de comandos por voz
 while True:
-    engine.say("Habla")
+    engine.say("te escucho")
     engine.runAndWait()
 
     text = recognize_speech()  # Llamamos a la función que reconoce la voz
@@ -76,6 +85,8 @@ while True:
         engine.say("Hasta luego")
         engine.runAndWait()
         break
+    elif text == "repite":
+        funciones()
     else:
         engine.say("No se encontró opción")
         engine.runAndWait()
