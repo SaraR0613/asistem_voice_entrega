@@ -22,10 +22,8 @@ class SpeechRecognitionSystem:
 
 class FileManager:
 
-
-
-    def abrir_archivo(self, file_path: str):
-        os.system(f'start {file_path}')  # Usa 'start' en Windows para abrir archivos
+    def abrir_archivo(self, url_archivo: str):
+        os.system(f'start {url_archivo}')
 
     def crear_nota(self, nombre: str, _text: str):
         with open(f'C:/Prueba/{nombre}.txt', 'w', encoding='utf8') as note:
@@ -45,4 +43,4 @@ class WebNavigator:
 
     def abrir_google(self):
         url = 'https://www.google.com'
-        os.system(f'start {url}')  # Abre la URL en el navegador predeterminado
+        os.system(f'start {url}')
