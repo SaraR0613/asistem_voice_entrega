@@ -5,95 +5,107 @@ import json
 from vosk import Model, KaldiRecognizer
 from assistem.model_asistem import FileManager, SpeechRecognitionSystem, WebNavigator
 
-model_path = "C:/Users/Mateo/PycharmProjects/asistem_voice/assistem/vosk-model-small-es-0.42"
-if not os.path.exists(model_path):
-    print(f"Modelo no encontrado en {model_path}")
+parche_vosk = "C:/Users/Mateo/PycharmProjects/asistem_voice/assistem/vosk-model-small-es-0.42"
+if not os.path.exists(parche_vosk):
+    print(f"Modelo no encontrado en {parche_vosk}")
     exit(1)
-model = Model(model_path)
-recognizer = KaldiRecognizer(model, 16000)
-engine = pyttsx3.init()
-engine.setProperty("rate", 160)
+
+modelo = Model(parche_vosk)
+reconocedor = KaldiRecognizer(modelo, 16000)
+
+motor = pyttsx3.init()
+motor.setProperty("rate", 160)
 p = pyaudio.PyAudio()
 
+
 # Función para reconocer la voz usando Vosk
-def recognize_speech():
+def reconocer_voz():
     mic = pyaudio.PyAudio()
-    stream = mic.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=8192)
-    stream.start_stream()
+    reproducir = mic.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=8192)
+    reproducir.start_stream()
     print("Escuchando...")
     while True:
-        data = stream.read(4096, exception_on_overflow=False)
-        if recognizer.AcceptWaveform(data):
-            result = recognizer.Result()
-            result_json = json.loads(result)
-            text = result_json.get('text', '')
-            if text:
-                print(f"Has dicho: {text}")
-                return text.lower()  # Convertir a minúsculas
+        data = reproducir.read(4096, exception_on_overflow=False)
+        if reconocedor.AcceptWaveform(data):
+            resultado = reconocedor.Result()
+            resultado_json = json.loads(resultado)
+            texto = resultado_json.get('text', '')
+            if texto:
+                print(f"Has dicho: {texto}")
+                return texto.lower()  # Convertir a minúsculas
+
 
 def funciones():
-    engine.say("si quieres que te lea algo di uno\n"
-               "si quieres que te diga la hora y el dia di dos\n"
-               "si quieres creat un archivo de texto con algo di tres\n"
-               "si quieres abrir un archivo de texto di cuantro\n"
-               "si quieres abrir google di cinco\n"
-               "si queires abrir la carpeta donde se encuentran tus archivos de seis\n"
-               "si quieres dejar de usar di salir\n"
-               "si quieres que repita todo de nuevo di repite")
-    engine.runAndWait()
+    motor.say("si quieres que te lea algo di uno\n"
+              "si quieres que te diga la hora y el dia di dos\n"
+              "si quieres crear un archivo de texto con algo di tres\n"
+              "si quieres abrir un archivo de texto di cuatro\n"
+              "si quieres abrir google di cinco\n"
+              "si quieres abrir la carpeta donde se encuentran tus archivos de seis\n"
+              "si quieres dejar de usar di salir\n"
+              "si quieres que repita todo de nuevo di repite")
+    motor.runAndWait()
+
 
 funciones()
 
 # Bucle principal de comandos por voz
 while True:
-    engine.say("te escucho")
-    engine.runAndWait()
+    motor.say("te escucho")
+    motor.runAndWait()
 
-    text = recognize_speech()  # Llamamos a la función que reconoce la voz
+    text = reconocer_voz()
 
     if text == "uno":
-        engine.say("¿Qué quieres que te lea?")
-        engine.runAndWait()
-        a = recognize_speech()
-        SpeechRecognitionSystem().speak(a)
+        motor.say("¿Qué quieres que te lea?")
+        motor.runAndWait()
+        a = reconocer_voz()
+        SpeechRecognitionSystem().hablar(a)
 
     elif text == "dos":
-        SpeechRecognitionSystem().get_datetime()
+        SpeechRecognitionSystem().obtener_fecha()
 
     elif text == "tres":
-        engine.say("¿Qué nombre quieres que tenga el archivo?")
-        engine.runAndWait()
-        nombre = recognize_speech()
+        motor.say("¿Qué nombre quieres que tenga el archivo?")
+        motor.runAndWait()
+        nombre = reconocer_voz()
 
-        engine.say(f"¿Qué quieres que contenga el archivo {nombre}?")
-        engine.runAndWait()
-        texto = recognize_speech()
+        motor.say(f"¿Qué quieres que contenga el archivo {nombre}?")
+        motor.runAndWait()
+        texto = reconocer_voz()
 
-        FileManager().create_note(nombre, texto)
+        FileManager().crear_nota(nombre, texto)
 
     elif text == "cuatro":
-            engine.say("¿Qué archivo quieres abrir")
-            engine.runAndWait()
-            nombre = recognize_speech()
+        motor.say("¿Qué archivo quieres abrir")
+        motor.runAndWait()
+        nombre = reconocer_voz()
 
-            url = f"C:/Prueba/{nombre}.txt"
-            FileManager().open_file(url)
+        url = f"C:/Prueba/{nombre}.txt"
+        FileManager().abrir_archivo(url)
 
     elif text == "cinco":
-        WebNavigator().open_google_tab()
+        motor.say("¿que archivo quieres que lea")
+        motor.runAndWait()
+
+        nombre = reconocer_voz()
+        FileManager().leer_archivo(nombre)
 
     elif text == "seis":
+        WebNavigator().abrir_google()
+
+    elif text == "siete":
         url = str("C:\Prueba")
-        FileManager().open_folder(url)
+        FileManager().abir_carpeta(url)
 
     elif text == "salir":
-        engine.say("Hasta luego")
-        engine.runAndWait()
+        motor.say("Hasta luego")
+        motor.runAndWait()
         break
 
     elif text == "repite":
         funciones()
 
     else:
-        engine.say("No se encontró opción")
-        engine.runAndWait()
+        motor.say("No se encontró opción")
+        motor.runAndWait()
