@@ -1,5 +1,4 @@
 import tkinter as tk
-from tkinter import messagebox
 from assistem.model_asistem import SpeechRecognitionSystem, FileManager, WebNavigator
 import threading
 
@@ -11,7 +10,7 @@ navegador_web = WebNavigator()
 
 # Función para el reconocimiento de voz y ejecución de comandos
 def ejecutar_comando_por_voz():
-    from test.tests import reconocer_voz, funciones  # Importamos la función para reconocer la voz
+    from assistem.app_assistem.app import reconocer_voz, funciones  # Importamos la función para reconocer la voz
     comando = reconocer_voz()  # Escucha la voz y obtiene el comando en texto
 
     # Mostramos el comando detectado en la interfaz

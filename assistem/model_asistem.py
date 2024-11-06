@@ -1,11 +1,8 @@
 import pyttsx3
 import os
 import datetime
-import pyaudio
-import json
-from vosk import Model, KaldiRecognizer
 
-motor = pyttsx3.init()  # Inicialización global del motor de pyttsx3
+motor = pyttsx3.init()
 
 
 class SpeechRecognitionSystem:
@@ -19,6 +16,9 @@ class SpeechRecognitionSystem:
         date_time_str = now.strftime("%Y-%m-%d %H:%M:%S")
         self.hablar(f"La fecha y hora actual son: {date_time_str}")
 
+    def abrir_calendario(self):
+        os.system('start outlookcal:')
+
 
 class FileManager:
 
@@ -26,11 +26,11 @@ class FileManager:
         os.system(f'start {url_archivo}')
 
     def crear_nota(self, nombre: str, _text: str):
-        with open(f'C:/Prueba/{nombre}.txt', 'w', encoding='utf8') as note:
+        with open(f'../../prueba_texto/{nombre}.txt', 'w', encoding='utf8') as note:
             note.write(_text)
 
     def leer_archivo(self, nombre: str):
-        with open(f'C:/Prueba/{nombre}.txt', 'r') as nota:
+        with open(f'../../prueba_texto/{nombre}.txt', 'r') as nota:
             leer = nota.read()
             motor.say(leer)
             motor.runAndWait()
