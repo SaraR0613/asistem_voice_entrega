@@ -81,15 +81,20 @@ if __name__ == "__main__":
             motor.runAndWait()
             nombre = reconocer_voz()
 
-            url = f"../../prueba_texto/{nombre}.txt"
+            url = str(files("prueba_texto").joinpath(f"{nombre}.txt"))
             FileManager().abrir_archivo(url)
 
         elif text == "cinco":
-            motor.say("¿que archivo quieres que lea")
-            motor.runAndWait()
+            try:
+                motor.say("¿que archivo quieres que lea")
+                motor.runAndWait()
+                nombre = reconocer_voz()
+                FileManager().leer_archivo(nombre)
+            except FileNotFoundError:
+                motor.say("no se encontro el archivo")
+                motor.runAndWait()
 
-            nombre = reconocer_voz()
-            FileManager().leer_archivo(nombre)
+
 
         elif text == "seis":
             WebNavigator().abrir_google()

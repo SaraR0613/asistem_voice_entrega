@@ -1,3 +1,5 @@
+from importlib.resources import files
+
 import pyttsx3
 import os
 import datetime
@@ -26,11 +28,13 @@ class FileManager:
         os.system(f'start {url_archivo}')
 
     def crear_nota(self, nombre: str, _text: str):
-        with open(f'../../prueba_texto/{nombre}.txt', 'w', encoding='utf8') as note:
+        ubicacion_carpeta = str(files("prueba_texto").joinpath(f"{nombre}.txt"))
+        with open(ubicacion_carpeta, 'w', encoding='utf8') as note:
             note.write(_text)
 
     def leer_archivo(self, nombre: str):
-        with open(f'../../prueba_texto/{nombre}.txt', 'r') as nota:
+        ubicacion_carpeta = str(files("prueba_texto").joinpath(f"{nombre}.txt"))
+        with open(ubicacion_carpeta, 'r') as nota:
             leer = nota.read()
             motor.say(leer)
             motor.runAndWait()
