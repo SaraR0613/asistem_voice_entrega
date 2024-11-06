@@ -41,15 +41,17 @@ def funciones():
               "si quieres que te diga la hora y el dia di dos\n"
               "si quieres crear un archivo de texto con algo di tres\n"
               "si quieres abrir un archivo de texto di cuatro\n"
-              "si quieres abrir google di cinco\n"
-              "si quieres abrir la carpeta donde se encuentran tus archivos de seis\n"
+              "si quieres que te lea un archivo de los ya existentes de cinco"
+              "si quieres abrir google di seis\n"
+              "si quieres abrir la carpeta donde se encuentran tus archivos de siete\n"
+              "si queires abrir el calendario di ocho\n"
               "si quieres dejar de usar di salir\n"
               "si quieres que repita todo de nuevo di repite")
     motor.runAndWait()
 
 
 if __name__ == "__main__":
-    #funciones()
+    funciones()
     while True:
         motor.say("te escucho")
         motor.runAndWait()
@@ -93,8 +95,6 @@ if __name__ == "__main__":
             except FileNotFoundError:
                 motor.say("no se encontro el archivo")
                 motor.runAndWait()
-
-
 
         elif text == "seis":
             WebNavigator().abrir_google()
