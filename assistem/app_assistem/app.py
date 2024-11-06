@@ -4,7 +4,7 @@ import pyttsx3
 import pyaudio
 import json
 from vosk import Model, KaldiRecognizer
-from assistem.model_asistem import FileManager, SpeechRecognitionSystem, WebNavigator
+from assistem.modelo import FileManager, SpeechRecognitionSystem, WebNavigator
 
 parche_vosk = str(files("dependencia_vosk").joinpath("vosk-model-es"))
 if not os.path.exists(parche_vosk):
@@ -95,8 +95,11 @@ if __name__ == "__main__":
             WebNavigator().abrir_google()
 
         elif text == "siete":
-            url = str("C:\Prueba")
+            url = str('C:/Users/Mateo/PycharmProjects/asistem_voice/prueba_texto')
             FileManager().abir_carpeta(url)
+
+        elif text == "ocho":
+            SpeechRecognitionSystem().abrir_calendario()
 
         elif text == "salir":
             motor.say("Hasta luego")
