@@ -16,6 +16,7 @@ if __name__ == "__main__":
 
     motor.say("Hola como estas, espero que te encuentres bien")
     motor.runAndWait()
+
     SpeechRecognitionSystem().funciones()
     while True:
         motor.say("te escucho")

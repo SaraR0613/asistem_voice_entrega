@@ -1,6 +1,5 @@
 import json
 from importlib.resources import files
-
 import pyaudio
 import pyttsx3
 import os
@@ -97,7 +96,7 @@ class WebNavigator:
                                             "luján": "+573212443269"}
 
         hora: int = datetime.datetime.now().hour
-        minutos: int = datetime.datetime.now().minute
+        minutos: int = datetime.datetime.now().minute + 1
 
         numero_elegido: str = numeros_telefono[nombre]
         pywhatkit.sendwhatmsg(numero_elegido, mensaje, hora, minutos)
