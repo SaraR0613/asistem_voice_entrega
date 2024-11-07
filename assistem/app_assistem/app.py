@@ -41,9 +41,9 @@ def funciones():
               "si quieres que te diga la hora y el dia di dos\n"
               "si quieres crear un archivo de texto con algo di tres\n"
               "si quieres abrir un archivo de texto di cuatro\n"
-              "si quieres que te lea un archivo de los ya existentes de cinco"
+              "si quieres que te lea un archivo de los ya existentes di cinco"
               "si quieres abrir google di seis\n"
-              "si quieres abrir la carpeta donde se encuentran tus archivos de siete\n"
+              "si quieres abrir la carpeta donde se encuentran tus archivos di siete\n"
               "si queires abrir el calendario di ocho\n"
               "si quieres dejar de usar di salir\n"
               "si quieres que repita todo de nuevo di repite")
@@ -62,7 +62,7 @@ if __name__ == "__main__":
             motor.say("¿Qué quieres que te lea?")
             motor.runAndWait()
             a = reconocer_voz()
-            SpeechRecognitionSystem().hablar(a)
+            SpeechRecognitionSystem().dictado(a)
 
         elif text == "dos":
             SpeechRecognitionSystem().obtener_fecha()
@@ -92,19 +92,34 @@ if __name__ == "__main__":
                 motor.runAndWait()
                 nombre = reconocer_voz()
                 FileManager().leer_archivo(nombre)
+
             except FileNotFoundError:
                 motor.say("no se encontro el archivo")
                 motor.runAndWait()
 
         elif text == "seis":
             WebNavigator().abrir_google()
+            motor.say("google ya esta abierta")
+            motor.runAndWait()
 
         elif text == "siete":
             url = str('C:/Users/Mateo/PycharmProjects/asistem_voice/prueba_texto')
             FileManager().abir_carpeta(url)
+            motor.say("La carpeta donde se tiene tus archivos esta abierta")
+            motor.runAndWait()
 
         elif text == "ocho":
             SpeechRecognitionSystem().abrir_calendario()
+            motor.say("El calendario esta abierto")
+            motor.runAndWait()
+
+        elif text == "nueve":
+            motor.say("Elige el numero de la persona a la que deseas enviar el mensaje")
+            motor.runAndWait()
+            numero: str = reconocer_voz()
+            motor.say("Elige el mensaje que deseas enviar")
+            motor.runAndWait()
+
 
         elif text == "salir":
             motor.say("Hasta luego")
