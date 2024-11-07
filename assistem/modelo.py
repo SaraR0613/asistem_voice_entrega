@@ -37,6 +37,20 @@ class SpeechRecognitionSystem:
                     print(f"Has dicho: {texto}")
                     return texto.lower()  # Convertir a minúsculas
 
+    def funciones(self):
+        motor.say("si quieres que te lea algo di uno\n"
+                  "si quieres que te diga la hora y el dia di dos\n"
+                  "si quieres crear un archivo de texto con algo di tres\n"
+                  "si quieres abrir un archivo de texto di cuatro\n"
+                  "si quieres que te lea un archivo de los ya existentes di cinco"
+                  "si quieres abrir google di seis\n"
+                  "si quieres abrir la carpeta donde se encuentran tus archivos di siete\n"
+                  "si quieres abrir el calendario di ocho\n"
+                  "si quieres enviar un mensaje di nueve\n"
+                  "si quieres dejar de usar di salir\n"
+                  "si quieres que repita todo de nuevo di repite")
+        motor.runAndWait()
+
     def dictado(self, text_: str):
         motor.say(text_)
         motor.runAndWait()
