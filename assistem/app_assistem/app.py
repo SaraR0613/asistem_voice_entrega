@@ -44,13 +44,17 @@ def funciones():
               "si quieres que te lea un archivo de los ya existentes di cinco"
               "si quieres abrir google di seis\n"
               "si quieres abrir la carpeta donde se encuentran tus archivos di siete\n"
-              "si queires abrir el calendario di ocho\n"
+              "si quieres abrir el calendario di ocho\n"
+              "si quieres enviar un mensaje di nueve\n"
               "si quieres dejar de usar di salir\n"
               "si quieres que repita todo de nuevo di repite")
     motor.runAndWait()
 
 
 if __name__ == "__main__":
+
+    motor.say("Hola como estas, espero que te encuentres bien")
+    motor.runAndWait()
     funciones()
     while True:
         motor.say("te escucho")
@@ -117,9 +121,11 @@ if __name__ == "__main__":
             motor.say("Elige el numero de la persona a la que deseas enviar el mensaje")
             motor.runAndWait()
             numero = reconocer_voz()
+
             motor.say("Elige el mensaje que deseas enviar")
             motor.runAndWait()
             mensaje = reconocer_voz()
+
             WebNavigator().enviar_mensaje(numero, mensaje)
 
         elif text == "salir":

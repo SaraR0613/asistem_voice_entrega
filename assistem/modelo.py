@@ -52,7 +52,7 @@ class WebNavigator:
     def enviar_mensaje(self, nombre: str, mensaje: str):
         numeros_telefono: dict[str, str] = {"kevin": "+573054449333",
                                             "sara": "+573027334821",
-                                            "lujan": "+573212443269"}
+                                            "luján": "+573212443269"}
 
         hora: int = datetime.datetime.now().hour
         minutos: int = datetime.datetime.now().minute
