@@ -69,10 +69,10 @@ class FileManager:
     def abrir_archivo(self, url_archivo: str):
         os.system(f'start {url_archivo}')
 
-    def crear_nota(self, nombre_archivo: str, _text: str):
+    def crear_nota(self, nombre_archivo: str, _texto: str):
         ubicacion_carpeta = str(files("prueba_texto").joinpath(f"{nombre_archivo}.txt"))
         with open(ubicacion_carpeta, 'w', encoding='utf8') as note:
-            note.write(_text)
+            note.write(_texto)
 
     def leer_archivo(self, nombre_archivo: str):
         ubicacion_carpeta = str(files("prueba_texto").joinpath(f"{nombre_archivo}.txt"))

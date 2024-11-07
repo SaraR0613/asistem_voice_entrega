@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="500dfb35-9303-4b64-8c39-5763d6b3f774" name="Changes" comment="optimizacion funciones" />
+    <list default="true" id="500dfb35-9303-4b64-8c39-5763d6b3f774" name="Changes" comment="optimizacion funciones">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assistem/modelo.py" beforeDir="false" afterPath="$PROJECT_DIR$/assistem/modelo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaz_grafica/interfaz_assitem.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz_grafica/interfaz_assitem.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +82,7 @@
       <recent name="C:\Users\Sarita\PycharmProjects\asistem_voice" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.app (1)">
+  <component name="RunManager" selected="Python.interfaz_assitem">
     <configuration name="app (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject3" />
       <option name="ENV_FILES" value="" />
@@ -191,8 +196,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.app (1)" />
         <item itemvalue="Python.interfaz_assitem" />
+        <item itemvalue="Python.app (1)" />
         <item itemvalue="Python.app" />
         <item itemvalue="Python.interfaz grafica (1)" />
         <item itemvalue="Python.interfaz grafica" />
@@ -506,7 +511,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730956063351</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="optimizacion funciones">
+      <option name="closed" value="true" />
+      <created>1730956440555</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1730956440555</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
