@@ -51,8 +51,8 @@ class SpeechRecognitionSystem:
                   "si quieres que repita todo de nuevo di repite")
         motor.runAndWait()
 
-    def dictado(self, text_: str):
-        motor.say(text_)
+    def dictado(self, texto_: str):
+        motor.say(texto_)
         motor.runAndWait()
 
     def obtener_fecha(self):
