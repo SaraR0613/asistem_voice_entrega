@@ -82,7 +82,7 @@
       <recent name="C:\Users\Sarita\PycharmProjects\asistem_voice" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.interfaz_assitem">
+  <component name="RunManager" selected="Python.app (1)">
     <configuration name="app (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject3" />
       <option name="ENV_FILES" value="" />
@@ -196,8 +196,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.interfaz_assitem" />
         <item itemvalue="Python.app (1)" />
+        <item itemvalue="Python.interfaz_assitem" />
         <item itemvalue="Python.app" />
         <item itemvalue="Python.interfaz grafica (1)" />
         <item itemvalue="Python.interfaz grafica" />
