@@ -5,3 +5,4 @@ gTTS~=2.5.3
 pyttsx3~=2.97
 PyAudio~=0.2.14
 vosk~=0.3.45
+pywhatkit~=5.4

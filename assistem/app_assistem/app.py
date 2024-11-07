@@ -116,10 +116,11 @@ if __name__ == "__main__":
         elif text == "nueve":
             motor.say("Elige el numero de la persona a la que deseas enviar el mensaje")
             motor.runAndWait()
-            numero: str = reconocer_voz()
+            numero = reconocer_voz()
             motor.say("Elige el mensaje que deseas enviar")
             motor.runAndWait()
-
+            mensaje = reconocer_voz()
+            WebNavigator().enviar_mensaje(numero, mensaje)
 
         elif text == "salir":
             motor.say("Hasta luego")

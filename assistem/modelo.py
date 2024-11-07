@@ -49,9 +49,13 @@ class WebNavigator:
         url = 'https://www.google.com'
         os.system(f'start {url}')
 
-    def enviar_mensaje(self, nombre: str, mensaje: str, tiempo_hora: int, tiempo_minutos: int):
+    def enviar_mensaje(self, nombre: str, mensaje: str):
         numeros_telefono: dict[str, str] = {"kevin": "+573054449333",
                                             "sara": "+573027334821",
                                             "lujan": "+573212443269"}
+
+        hora: int = datetime.datetime.now().hour
+        minutos: int = datetime.datetime.now().minute
+
         numero_elegido: str = numeros_telefono[nombre]
-        pywhatkit.sendwhatmsg(numero_elegido, mensaje, tiempo_hora, tiempo_minutos)
+        pywhatkit.sendwhatmsg(numero_elegido, mensaje, hora, minutos)
